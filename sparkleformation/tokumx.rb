@@ -21,6 +21,7 @@ EOF
            :volume_count => ENV['volume_count'],
            :volume_size => ENV['volume_size'],
            :security_group_ids => _array( registry!(:my_security_group_id) ),
+           :subnet_id => registry!(:private_subnet_id, 0),
            :iam_instance_profile => 'TokumxIAMInstanceProfile',
            :iam_role => 'TokumxIAMRole'
           )
@@ -31,6 +32,7 @@ EOF
            :volume_count => ENV['volume_count'],
            :volume_size => ENV['volume_size'],
            :security_group_ids => _array( registry!(:my_security_group_id) ),
+           :subnet_id => registry!(:private_subnet_id, 1),
            :iam_instance_profile => 'TokumxIAMInstanceProfile',
            :iam_role => 'TokumxIAMRole',
            :depends_on => 'Tokumx01Ec2Instance'
@@ -42,6 +44,7 @@ EOF
            :volume_count => ENV['volume_count'],
            :volume_size => ENV['volume_size'],
            :security_group_ids => _array( registry!(:my_security_group_id) ),
+           :subnet_id => registry!(:private_subnet_id, 2),
            :iam_instance_profile => 'TokumxIAMInstanceProfile',
            :iam_role => 'TokumxIAMRole',
            :depends_on => 'Tokumx02Ec2Instance'

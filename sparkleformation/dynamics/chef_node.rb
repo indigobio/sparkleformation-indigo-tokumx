@@ -89,7 +89,7 @@ SparkleFormation.dynamic(:chef_node) do |_name, _config = {}|
     iam_instance_profile ref!(_config[:iam_instance_profile])
     key_name ref!(:ssh_key_pair)
     monitoring ref!("#{_name}_instance_monitoring".to_sym)
-    subnet_id registry!(:random_private_subnet_id)
+    subnet_id _config.fetch(:subnet_id, registry!(:private_subnet_id))
     security_group_ids _config[:security_group_ids]
     block_device_mappings registry!(:ebs_volumes,
                                     :io1_condition => "#{_name.capitalize}VolumesAreIo1",

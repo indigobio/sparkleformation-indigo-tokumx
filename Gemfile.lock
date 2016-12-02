@@ -19,6 +19,13 @@ GIT
       aws-sdk-core (~> 2)
 
 GIT
+  remote: https://github.com/gswallow/sparkle-pack-aws-my-snapshots.git
+  revision: fe6964d8a8e887d9d988e9ee471445eeda33b66d
+  specs:
+    sparkle-pack-aws-my-snapshots (0.0.1)
+      aws-sdk-core (~> 2)
+
+GIT
   remote: https://github.com/gswallow/sparkle-pack-aws-my-sns-topics.git
   revision: 228496812903043e055ccf76aab5fd5e9b64fbc1
   specs:
@@ -27,19 +34,14 @@ GIT
 
 GIT
   remote: https://github.com/gswallow/sparkle-pack-aws-my-subnets.git
-  revision: a489699ed6473168a7ef9579c5f481595dec35b7
+  revision: 6d67f596ce05d20bb6726cc4143f3d7ba8e26bb1
   specs:
     sparkle-pack-aws-my-subnets (0.0.1)
       aws-sdk-core (~> 2)
 
-PATH
-  remote: /Users/gswallow/src/sparkle-pack-aws-my-snapshots
-  specs:
-    sparkle-pack-aws-my-snapshots (0.0.1)
-      aws-sdk-core (~> 2)
-
-PATH
-  remote: /Users/gswallow/src/sparkle-pack-cfn-init-chef
+GIT
+  remote: https://github.com/gswallow/sparkle-pack-cfn-init-chef.git
+  revision: 7635bbffae1e385b072bcb0fe29c008b07d264f8
   specs:
     sparkle-pack-cfn-init-chef (0.0.4)
       sparkle_formation
