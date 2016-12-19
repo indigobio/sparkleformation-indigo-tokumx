@@ -3,7 +3,7 @@ ENV['volume_size']           ||= '500'
 ENV['sg']                    ||= 'private_sg'
 ENV['chef_run_list']         ||= 'role[base],role[tokumx_server]'
 ENV['arbiter_run_list']      ||= 'role[base],role[tokumx_arbiter]'
-ENV['notification_topic']    ||= "#{ENV['org']}-#{ENV['environment']}-deregister-chef-node"
+ENV['notification_topic']    ||= "#{ENV['org']}_#{ENV['environment']}_deregister_chef_node"
 
 SparkleFormation.new('tokumx').load(:base, :chef_base, :trusty_ami, :ssh_key_pair, :snapshot_chooser).overrides do
   description <<"EOF"
