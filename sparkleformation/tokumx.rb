@@ -5,7 +5,7 @@ ENV['chef_run_list']         ||= 'role[base],role[tokumx_server]'
 ENV['arbiter_run_list']      ||= 'role[base],role[tokumx_arbiter]'
 ENV['notification_topic']    ||= "#{ENV['org']}_#{ENV['environment']}_deregister_chef_node"
 
-SparkleFormation.new('tokumx').load(:base, :chef_base, :trusty_ami, :ssh_key_pair, :snapshot_chooser).overrides do
+SparkleFormation.new('tokumx').load(:base, :chef_base, :trusty_ami, :ssh_key_pair, :snapshot_chooser, :git_rev_outputs).overrides do
   description <<"EOF"
 TokuMX EC2 instances, configured by Chef.  Route53 records: mongo0[1,2,3].#{ENV['private_domain']}.
 EOF
